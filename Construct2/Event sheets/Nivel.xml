@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Nivel</name>
+    <events>
+        <variable comment="Nível de dificuldade do Computador" constant="0" name="Nivel" static="0" type="number">-1</variable>
+        <event-block>
+            <conditions>
+                <condition id="-2" name="On start of layout" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">Nivel</param>
+                    <param id="1" name="Value">-1</param>
+                </action>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">Vertical</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">NmroJogadas</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="3" name="For each element" type="CampoComputador">
+                            <param id="0" name="Axes">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set at XYZ" type="CampoComputador">
+                            <param id="0" name="X">CampoComputador.CurX</param>
+                            <param id="1" name="Y">CampoComputador.CurY</param>
+                            <param id="2" name="Z">CampoComputador.CurZ</param>
+                            <param id="3" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set at XYZ" type="CampoJogador">
+                            <param id="0" name="X">CampoComputador.CurX</param>
+                            <param id="1" name="Y">CampoComputador.CurY</param>
+                            <param id="2" name="Z">CampoComputador.CurZ</param>
+                            <param id="3" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1">
+            <conditions>
+                <condition id="3" name="On touched object" type="Touch">
+                    <param id="0" name="Object">botVoltar</param>
+                </condition>
+                <condition id="6" name="On object clicked" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">botVoltar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" type="System">
+                    <param id="0" name="Layout">&quot;MenuInicial&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1">
+            <conditions>
+                <condition id="7" name="Cursor is over object" type="Mouse">
+                    <param id="0" name="Object">botVoltar</param>
+                </condition>
+                <condition id="4" name="Is touching object" type="Touch">
+                    <param id="0" name="Object">botVoltar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" type="botVoltar">
+                    <param id="0" name="Animation">&quot;Selected&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-22" name="Else" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" type="botVoltar">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Clique/Toque</comment>
+        <event-block any="1">
+            <conditions>
+                <condition id="6" name="On object clicked" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Nivel1</param>
+                </condition>
+                <condition id="3" name="On touched object" type="Touch">
+                    <param id="0" name="Object">Nivel1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">Nivel</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" type="System">
+                    <param id="0" name="Layout">&quot;Principal&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1">
+            <conditions>
+                <condition id="6" name="On object clicked" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Nivel2</param>
+                </condition>
+                <condition id="3" name="On touched object" type="Touch">
+                    <param id="0" name="Object">Nivel2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">Nivel</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" type="System">
+                    <param id="0" name="Layout">&quot;Principal&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1">
+            <conditions>
+                <condition id="6" name="On object clicked" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Nivel3</param>
+                </condition>
+                <condition id="3" name="On touched object" type="Touch">
+                    <param id="0" name="Object">Nivel3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" type="System">
+                    <param id="0" name="Variable">Nivel</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" type="System">
+                    <param id="0" name="Layout">&quot;Principal&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Seleção</comment>
+        <event-block any="1">
+            <conditions>
+                <condition id="7" name="Cursor is over object" type="Mouse">
+                    <param id="0" name="Object">Nivel1</param>
+                </condition>
+                <condition id="4" name="Is touching object" type="Touch">
+                    <param id="0" name="Object">Nivel1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" type="Nivel1">
+                    <param id="0" name="Animation">&quot;Selected&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-22" name="Else" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" type="Nivel1">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1">
+            <conditions>
+                <condition id="7" name="Cursor is over object" type="Mouse">
+                    <param id="0" name="Object">Nivel2</param>
+                </condition>
+                <condition id="4" name="Is touching object" type="Touch">
+                    <param id="0" name="Object">Nivel2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" type="Nivel2">
+                    <param id="0" name="Animation">&quot;Selected&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-22" name="Else" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" type="Nivel2">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1">
+            <conditions>
+                <condition id="7" name="Cursor is over object" type="Mouse">
+                    <param id="0" name="Object">Nivel3</param>
+                </condition>
+                <condition id="4" name="Is touching object" type="Touch">
+                    <param id="0" name="Object">Nivel3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" type="Nivel3">
+                    <param id="0" name="Animation">&quot;Selected&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-22" name="Else" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" type="Nivel3">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
